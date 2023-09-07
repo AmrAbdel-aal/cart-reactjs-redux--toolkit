@@ -13,6 +13,7 @@ const cartSlice = createSlice({
   reducers: {
     clearCart: (state) => {
       state.cartItems = [];
+      state.total = 0;
     },
     changeTotal: (state) => {
       console.log("dsakjdaiohjdnoia");
