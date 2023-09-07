@@ -73,14 +73,18 @@ const Hero = () => {
         <h4>{total}</h4>
       </div>
       <div className="clear">
-        <button
-          className="clear-btn"
-          onClick={() => {
-            dispatch(showModal());
-          }}
-        >
-          CLEAR BAG
-        </button>
+        {cartItems.length >= 1 ? (
+          <button
+            className="clear-btn"
+            onClick={() => {
+              dispatch(showModal());
+            }}
+          >
+            CLEAR BAG
+          </button>
+        ) : (
+          <button className="clear-btn">CLEAR BAG</button>
+        )}
       </div>
     </Wrapper>
   );
